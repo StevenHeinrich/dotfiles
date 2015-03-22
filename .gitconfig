@@ -4,6 +4,7 @@
 	la = config --get-regexp alias
 	s = status
 	df = diff --color --color-words --abbrev
+	l = log --pretty=oneline -n 20 --graph --abbrev-commit # View abbreviated SHA, description, and history graph of the latest 20 commits
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
 	rem = remote -v
 	#  do   =====
@@ -21,6 +22,18 @@
 	r = reset --hard HEAD
 	rv = revert HEAD
 	wtf = blame --date local
+
+	# Show verbose output about tags
+	tags = tag -l
+
+	# Amend the currently staged files to the latest commit
+	amend = commit --amend --reuse-message=HEAD
+
+	# Remove the old tag with this name and tag the latest commit with it.
+	retag = "!r() { git tag -d $1 && git push origin :refs/tags/$1 && git tag $1; }; r"
+
+	# List contributors with number of commits
+	contributors = shortlog --summary --numbered
 
 [color]
 	ui = always
