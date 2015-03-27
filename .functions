@@ -19,6 +19,18 @@ function dash() {
     open dash://$1:$2
 }
 
+function tc-start() {
+    /Library/Tomcat/bin/startup.sh
+}
+
+function tc-stop() {
+    /Library/Tomcat/bin/shutdown.sh
+}
+
+function cattail() {
+    tail -f /Library/tomcat/logs/catalina.out
+}
+
 # cd into whatever is the forefront Finder window.
 cdf() {  # short for cdfinder
   cd "`osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)'`"
