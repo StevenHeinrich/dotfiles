@@ -21,7 +21,7 @@
 	#  undo =====
 	r = reset --hard HEAD
 	rv = revert HEAD
-	wtf = blame --date local
+	wtf = blame -c --date=local
 
 	# Show verbose output about tags
 	tags = tag -l
