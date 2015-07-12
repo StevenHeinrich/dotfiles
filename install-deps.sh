@@ -58,3 +58,6 @@ sudo easy_install Pygments
 # chrome canary as default
 # on a mac you can set chrome canary as your default inside of Safari preferences :)
 
+# ensure control over npm directories
+sudo chown -R $(whoami) ~/.npm
+sudo chown -R $(whoami) /usr/local/lib/node_modules
