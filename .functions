@@ -36,11 +36,6 @@ cdf() {  # short for cdfinder
   cd "`osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)'`"
 }
 
-# cd into whatever is set as the Workspace (as bash alias).
-# cdw() {
-# 	cd /Developer/meridian-geo
-# }
-
 # show all terminal colors based on 256 tput setaf
 tcolor() {
 	( x=`tput op` y=`printf %$((${COLUMNS}-6))s`;for i in {0..256};do o=00$i;echo -e ${o:${#o}-3:3} `tput setaf $i;tput setab $i`${y// /=}$x;done; )
@@ -192,9 +187,9 @@ gifify() {
 }
 
 changeWorkspace() {
-	if [ $# -eq 0 ] 
+	if [ $# -eq 0 ]
 		then
-			cd /Developer/meridian-geo # current popular project you are working on
+			cd /Developer # current popular project you are working on
     else
     	# common workspace (change 'Developer' to match your path) for project directories
     	cd /Developer/$1
