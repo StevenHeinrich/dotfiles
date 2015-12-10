@@ -52,6 +52,9 @@ alias la="ls -la ${colorflag}"
 # List only directories
 alias lsd='ls -l | grep "^d"'
 
+# List only directories, including dot files
+alias lsda='ls -l | grep "^d"'
+
 # Always use color output for `ls`
 if [[ "$OSTYPE" =~ ^darwin ]]; then
 	alias ls="command ls -G"
