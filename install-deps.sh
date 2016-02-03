@@ -9,6 +9,11 @@ bash < <( curl https://raw.github.com/jamiew/git-friendly/master/install.sh)
 # rvm for the rubiess
 curl -L https://get.rvm.io | bash -s stable --ruby
 
+
+# ensure control over npm directories
+sudo chown -R $(whoami) ~/.npm
+sudo chown -R $(whoami) /usr/local/lib/node_modules
+
 # https://github.com/isaacs/nave
 # needs npm, obviously.
 # TODO: I think i'd rather curl down the nave.sh, symlink it into /bin and use that for initial node install.
@@ -57,7 +62,3 @@ sudo easy_install Pygments
 
 # chrome canary as default
 # on a mac you can set chrome canary as your default inside of Safari preferences :)
-
-# ensure control over npm directories
-sudo chown -R $(whoami) ~/.npm
-sudo chown -R $(whoami) /usr/local/lib/node_modules
