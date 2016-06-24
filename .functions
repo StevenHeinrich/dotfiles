@@ -259,14 +259,10 @@ function showallfiles(){
     killall Finder
 }
 
-function notify(){
-    osascript -e "display notification \"$1\" with title \"$2\" subtitle \"$3\""
-}
-
 # One step function to launch development build for BEER
 function beer-build() {
    # execute Gradle Build for Java Code
-   gradle build && 
+   gradle build &&
    # Copy the built WAR file to tomcat directory
    cp -f ./build/libs/beer-prototype.war /Library/Tomcat/webapps/ROOT.war &&
    # Connect to PostGres with a lame password of, "beer"
@@ -275,4 +271,34 @@ function beer-build() {
    psql -U beer --command 'drop schema public cascade; create schema public;' &&
    # Load Seed Data, since above command dropped old tables
    gradle seedDb
+}
+
+# get github user's email via username
+function github-email(){
+	~/bin/github-email $1
+}
+
+# direct native use of osx built in notifications
+function notify(){
+	osascript -e "display notification \"$1\" with title \"$2\" subtitle \"$3\""
+}
+
+# Sample use case for Alerter (a default osx notification wrapper) - https://github.com/vjeantet/alerter
+function alertify(){
+	ANSWER="$(~/bin/alerter -message 'Start now ?' -closeLabel No -actions Yes,Maybe,'Remind me later...' -timeout 10)"
+	case $ANSWER in
+	    "@TIMEOUT") echo "Timeout man, sorry" ;;
+	    "@CLOSED") echo "You clicked on the default alert close button" ;;
+	    "@CONTENTCLICKED") echo "You clicked the alert's content !" ;;
+	    "@ACTIONCLICKED") echo "You clicked the alert default action button" ;;
+	    "Maybe") echo "Action MAYBE" ;;
+	    "No") echo "Action NO" ;;
+	    "Yes") echo "Action YES" ;;
+	    **) echo "? --> $ANSWER" ;;
+	esac
+}
+
+# shortcut to Alerter
+function alerter(){
+	~/bin/alerter $@
 }
