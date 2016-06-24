@@ -30,7 +30,7 @@ export PATH
 
 …is really important. even for these files.
 
-Install [Dotfiles Syntax Highlighting](https://github.com/mattbanks/dotfiles-syntax-highlighting-st2) via [Sublime Text 2 Package Control](http://wbond.net/sublime_packages/package_control)
+Install [Dotfiles Syntax Highlighting](https://github.com/mattbanks/dotfiles-syntax-highlighting-st2) via [Sublime Text Package Control](https://packagecontrol.io/installation)
 
 
 ### Sensible OS X defaults
