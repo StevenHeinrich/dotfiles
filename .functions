@@ -258,3 +258,18 @@ function showallfiles(){
     sudo defaults write com.apple.finder AppleShowAllFiles -bool YES
     killall Finder
 }
+
+
+# One step function to launch development build for BEER
+function beer-build() {
+   # execute Gradle Build for Java Code
+   gradle build && 
+   # Copy the built WAR file to tomcat directory
+   cp -f ./build/libs/beer-prototype.war /Library/Tomcat/webapps/ROOT.war &&
+   # Connect to PostGres with a lame password of, "beer"
+   export PGPASSWORD=beer &&
+   # Drop old tables and recreate
+   psql -U beer --command 'drop schema public cascade; create schema public;' &&
+   # Load Seed Data, since above command dropped old tables
+   gradle seedDb
+}
