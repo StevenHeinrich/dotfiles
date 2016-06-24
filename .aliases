@@ -68,6 +68,9 @@ fi
 # 							   sudo easy_install Pygments
 alias c='pygmentize -O style=monokai -f console256 -g'
 
+# Vim
+alias v="vim"
+
 # GIT STUFF
 alias g="git"
 alias gh="git h"
@@ -105,10 +108,6 @@ alias trimcopy="tr -d '\n' | pbcopy"
 
 # Recursively delete `.DS_Store` files
 alias cleanup="find . -name '*.DS_Store' -type f -ls -delete"
-
-# Shortcuts
-alias g="git"
-alias v="vim"
 
 # File size
 alias fs="stat -f \"%z bytes\""
