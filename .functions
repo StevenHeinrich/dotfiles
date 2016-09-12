@@ -302,3 +302,7 @@ function alertify(){
 function alerter(){
 	~/bin/alerter $@
 }
+
+function findServiceByPort(){
+  lsof -i TCP:$1
+}
