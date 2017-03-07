@@ -8,6 +8,12 @@ function myip() {
     ifconfig | grep 'inet 192'
 }
 
+
+# list MAC address
+function mymac() {
+	ifconfig en1 | awk '/ether/{print $2}'
+}
+
 # find shorthand
 function f() {
     find . -name "$1"
