@@ -74,6 +74,7 @@ alias v="vim"
 # GIT STUFF
 alias g="git"
 alias gh="git h"
+alias gs="git s"
 
 # Undo a `git push`
 alias undopush="git push -f origin HEAD^:master"
