@@ -257,11 +257,11 @@ gitclean() {
 }
 
 function hideallfiles(){
-    sudo defaults write com.apple.finder AppleShowAllFiles -bool NO
+    defaults write com.apple.finder AppleShowAllFiles -bool NO
     killall Finder
 }
 function showallfiles(){
-    sudo defaults write com.apple.finder AppleShowAllFiles -bool YES
+    defaults write com.apple.finder AppleShowAllFiles -bool YES
     killall Finder
 }
 
