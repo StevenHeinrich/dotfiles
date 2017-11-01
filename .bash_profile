@@ -27,3 +27,9 @@ complete -W "NSGlobalDomain" defaults
 if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi
+
+# Terminal Command History Settings
+export HISTFILE=/Users/<USERNAME>/.bash_history
+export HISTFILESIZE=100000
+export HISTSIZE=1000
+export HISTIGNORE="&:[ ]*:exit"
