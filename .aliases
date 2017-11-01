@@ -20,7 +20,8 @@ alias show=showallfiles
 # programs
 # alias slt='open -a "Sublime Text 2"'
 # also/or do this:
-ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
+# ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
+ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
 
 
 # Redo with sudo
