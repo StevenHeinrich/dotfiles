@@ -5,7 +5,7 @@
 
 
 # default_username='stevenheinrich' # to shorten the description of your loacation in terminal, add your username
-default_username='stevenheinrich'
+default_username='stevenheinrich2'
 
 if [[ $COLORTERM = gnome-* && $TERM = xterm ]] && infocmp gnome-256color >/dev/null 2>&1; then
   export TERM=gnome-256color

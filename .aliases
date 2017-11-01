@@ -19,9 +19,6 @@ alias show=showallfiles
 
 # programs
 # alias slt='open -a "Sublime Text 2"'
-# also/or do this:
-ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
-
 
 # Redo with sudo
 alias please='sudo $(history -p \!\!)'

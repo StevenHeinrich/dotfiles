@@ -60,5 +60,5 @@ git clone git://github.com/jeroenbegyn/VLCControl.git
 sudo easy_install Pygments
 
 
-# chrome canary as default
-# on a mac you can set chrome canary as your default inside of Safari preferences :)
+# create symlink for sublime
+ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
