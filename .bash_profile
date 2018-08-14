@@ -24,9 +24,10 @@ complete -W "NSGlobalDomain" defaults
 
 # Use git-completion (if you have it)
 # get it like this... curl https://raw.github.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
-if [ -f ~/.git-completion.bash ]; then
-  . ~/.git-completion.bash
-fi
+# if [ -f ~/.git-completion.bash ]; then
+#   . ~/.git-completion.bash
+# fi
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 
 # Terminal Command History Settings
 export HISTFILE=/Users/<USERNAME>/.bash_history
