@@ -73,6 +73,8 @@ alias g="git"
 alias gh="git h"
 alias gs="git s"
 
+alias gbd="git for-each-ref --format='%(refname)' refs/heads/ | cut -c 12- | xargs git branch -d"
+
 # Undo a `git push`
 alias undopush="git push -f origin HEAD^:master"
 
