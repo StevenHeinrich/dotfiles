@@ -202,6 +202,17 @@ changeWorkspace() {
     fi
 }
 
+gitToggleMaster() {
+	if [ $oldGitBranch -z ]
+		then
+			oldGitBranch=$(git rev-parse --abbrev-ref HEAD)
+			git checkout master
+    else
+    	git checkout $oldGitBranch
+    	oldGitBranch=''
+    fi
+}
+
 gitclean() {
 	git fetch -p origin
 

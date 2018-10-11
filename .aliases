@@ -11,6 +11,9 @@ alias clr="clear"
 # Current Workspace Defined by You
 alias cdw=changeWorkspace
 
+# Toggle current branch over to master, storing current branch in variable to be able to toggle back
+alias gtm=gitToggleMaster
+
 # Hide the 'hidden' files
 alias hide=hideallfiles
 
