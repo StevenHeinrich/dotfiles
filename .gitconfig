@@ -20,7 +20,9 @@
 	bd = branch -d
 	bdf = branch -D
 	#  undo =====
-	r = reset --hard HEAD
+	r = reset HEAD
+	rc = reset --soft HEAD^
+	rch = reset --hard HEAD^
 	rv = revert HEAD
 	wtf = blame -c --date=local
 
