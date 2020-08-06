@@ -4,9 +4,9 @@
 	la = config --get-regexp alias
 	s = status
 	df = diff --color --color-words --abbrev
-	l = log --pretty=oneline -n 5 --graph --abbrev-commit # View abbreviated SHA, description, and history graph of the latest 5 commits
-	ll = log --pretty=oneline --graph --abbrev-commit # View abbreviated SHA, description, and history graph with no limit
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+	l = log --color --oneline --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -- # View abbreviated SHA, description, description, and history graph with no limit 
+	ll = log --color --oneline -n 7 --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -- # View abbreviated SHA, description, and history graph of the latest 7 commits
+	lc = log  --oneline --no-merges --color --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -- # clean log ignoringe all the merge commits
 	rem = remote -v
 	#  do   =====
 	up = pull
