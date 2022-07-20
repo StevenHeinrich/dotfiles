@@ -323,3 +323,8 @@ function alerter(){
 function findServiceByPort(){
   lsof -i TCP:$1
 }
+
+# Create a Build ID bases on  the format of YY.DoY.<incrementing number passed by user>
+function getBuildId(){
+	date +%y.%j.$1
+}

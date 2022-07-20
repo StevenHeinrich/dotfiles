@@ -144,3 +144,6 @@ alias wget='curl -O'
 
 # Check what service is running, by port number
 alias port='findServiceByPort'
+
+# Alias to getBuildId (Create a Build ID bases on  the format of YY.DoY.<incrementing number passed by user>)
+alias bid=getBuildId
