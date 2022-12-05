@@ -61,10 +61,10 @@
 	changed = green
 	untracked = cyan
 [diff]
-	tool = sublimerge
+	tool = vscode
 [merge]
 	log = true
-	tool = sublimerge
+	tool = vscode
 [url "git@github.com:"]
 	insteadOf = "gh:"
 	pushInsteadOf = "github:"
@@ -77,10 +77,10 @@
 	pushInsteadOf = "git://gist.github.com/"
 [url "git://gist.github.com/"]
 	insteadOf = "gist:"
-[difftool "sublimerge"]
-	cmd = subl -n --wait \"$REMOTE\" \"$LOCAL\" --command \"sublimerge_diff_views {\\\"left_read_only\\\": true, \\\"right_read_only\\\": true}\"
-[mergetool "sublimerge"]
-	cmd = subl -n --wait \"$REMOTE\" \"$BASE\" \"$LOCAL\" \"$MERGED\" --command \"sublimerge_diff_views\"
+[difftool "vscode"]
+	cmd = code --wait --diff $LOCAL $REMOTE
+[mergetool "vscode"]
+	cmd = code --wait $MERGED
 	trustExitCode = false
 [difftool]
 	prompt = false
