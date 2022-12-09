@@ -122,3 +122,19 @@ bindkey "^Z" autosuggest-clear # Control + z
 # Zsh-Autosuggest Config
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=234"
 ZSH_AUTOSUGGEST_STRATEGY=(match_prev_cmd history completion)
+
+# AUTOCOMPLETION
+
+# initialize autocompletion
+autoload -U compinit && compinit
+
+# history setup
+setopt SHARE_HISTORY
+HISTFILE=$HOME/.zhistory
+SAVEHIST=1000
+HISTSIZE=999
+setopt HIST_EXPIRE_DUPS_FIRST
+
+# autocompletion using arrow keys (based on history)
+bindkey '\e[A' history-search-backward
+bindkey '\e[B' history-search-forward
